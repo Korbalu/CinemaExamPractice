@@ -1,0 +1,20 @@
+<h5 class="text-center mb-3">Accounts</h5>
+<hr>
+<table class="table mb-5">
+  <thead>
+  <tr class="table-success">
+    <th scope="col">Name</th>
+    <th scope="col">Title</th>
+    <th scope="col">Number of Seats</th>
+    <th scope="col">Time of screening</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of reservations">
+    <td>{{element.name}}</td>
+    <td>{{element.title}}</td>
+    <td>{{element.numberOfSeats}}</td>
+    <td>{{element.screeningDate | date: 'yyyy-MM-dd'}}</td>
+  </tr>
+  </tbody>
+</table>

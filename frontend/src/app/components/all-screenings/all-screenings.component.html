@@ -1,0 +1,22 @@
+<h5 class="text-center mb-3">Accounts</h5>
+<hr>
+<table class="table mb-5">
+  <thead>
+  <tr class="table-success">
+    <th scope="col">Title</th>
+    <th scope="col">Total Seats</th>
+    <th scope="col">Remaining Seats</th>
+    <th scope="col">Screening Date</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of screens">
+    <td>{{element.title}}</td>
+    <td>{{element.totalSeat}}</td>
+    <td>{{element.freeSeat}}</td>
+    <td>{{element.screeningDate | date: 'yyyy-MM-dd'}}</td>
+    <img src="{{element.pictureUrl}}" style="height: 50px" alt="movie picture">
+  </tr>
+  </tbody>
+</table>

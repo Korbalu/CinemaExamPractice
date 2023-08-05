@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface ScreeningRepository extends JpaRepository<Screening, Long> {
     List<Screening> findByOrderByScreeningAsc();
+    List<Screening> findByTitle(String email);
 }

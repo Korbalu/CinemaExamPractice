@@ -38,4 +38,7 @@ public class Reservation {
         this.screening = screening;
     }
 
+    public Long getNumberOfSeats() {
+        return numberOfSeats;
+    }
 }

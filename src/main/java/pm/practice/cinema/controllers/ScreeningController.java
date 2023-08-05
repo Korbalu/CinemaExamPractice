@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import pm.practice.cinema.dto.incoming.ScreeningCommand;
+import pm.practice.cinema.dto.outgoing.ReservationScreeningListItem;
 import pm.practice.cinema.dto.outgoing.ScreeningListItem;
 import pm.practice.cinema.services.ScreeningService;
 import pm.practice.cinema.validators.ScreeningValidators;
@@ -36,5 +37,9 @@ public class ScreeningController {
     @GetMapping
     public ResponseEntity<List<ScreeningListItem>> allScreenings(){
         return new ResponseEntity<>(screeningService.listAllScreenings(), HttpStatus.OK);
+    }
+    @GetMapping("/all")
+    public ResponseEntity<List<ReservationScreeningListItem>> summary(){
+        return new ResponseEntity<>(screeningService.listAllScreeningsAndReservation(), HttpStatus.OK);
     }
 }
